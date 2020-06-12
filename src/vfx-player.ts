@@ -26,7 +26,9 @@ export default class VFXPlayer {
     constructor(private canvas: HTMLCanvasElement, pixelRatio?: number) {
         this.renderer = new THREE.WebGLRenderer({
             canvas,
-            alpha: true
+            alpha: true,
+            antialias: true,
+            powerPreference: 'high-performance'
         });
         this.renderer.autoClear = false;
         this.renderer.setClearAlpha(0);
